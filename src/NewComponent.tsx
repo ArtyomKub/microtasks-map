@@ -15,11 +15,7 @@ export const NewComponent: FC<NewComponentType> = (props) => {
         <div>
             {props.students.map((students) => {
                 return (
-                    <ul>
-                        <li>name: {students.name}</li>
-                        <li>age: {students.age}</li>
-                        <li>number: {students.id}</li>
-                    </ul>
+                    <li key={students.id}>{students.name}, {students.age}</li>
                 )
             })}
         </div>
